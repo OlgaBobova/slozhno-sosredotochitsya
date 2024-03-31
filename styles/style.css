@@ -1,5 +1,174 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+.header {
+  /* padding-block-start: 100%; */
+  display: grid;
+  grid-template-columns: ;
+  grid-template-rows: ;
+  background-image: url(/images/cover-image-dark.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.decorated-zone::before {
+  content: "";
+  border-style: solid;
+  width: 26px;
+  height: 26px;
+  border-width: 1px 1px 0px 0px;
+  border-color: rgba(255, 0, 112, 1);
+  position: relative;
+  z-index: 1;
+  margin-block-start: 10px;
+  padding-inline-end: 10px;
+  /* border-inline-end:10px; */
+}
+
+.decorated-zone::after {
+  width: 26px;
+  height: 26px;
+  border-width: 0px 0px 1px 1px;
+  content: "";
+  border-style: solid;
+  border-color: rgba(255, 0, 112, 1);
+  position: relative;
+  z-index: 1;
+  margin-block-end: 10px;
+}
+
+.selector::before {
+  content: "REC";
+  font-family: var(--accent-font);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--accent-color, #ff0070);
+  position: absolute;
+  z-index: 1;
+  /* width: 33px;
+  height: 26px; */
+  margin-block-start: 10px;
+  left: 304px;
+}
+
+.selector::after {
+  content: "";
+  background-color: #ff0070;
+  background: linear-gradient(70deg, #ff0070);
+  border-radius: 50%;
+  position: absolute;
+  width: 9px;
+  height: 9px;
+}
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  color: var(--text-color, rgba(241, 178, 206, 1));
+  font-family: var(--main-font, sans-serif);
+  background-color: var(--bg-color, #000000);
+  background-attachment: fixed;
+}
+
+.header__theme-menu {
+}
+
+.header__theme-menu-list {
+}
+
+.header__theme-menu-item {
+}
+
+.header__theme-menu-button {
+}
+
+.header__theme-menu-button_type_light {
+}
+
+.header__theme-menu-button_active {
+}
+
+.header__theme-menu-button_type_auto {
+}
+
+.header__theme-menu-button_type_dark {
+}
+
+.heading {
+  font-family: var(--accent-font, "IBM Plex mono", sans-serif);
+  color: var(--accent-color, #ff0070);
+  font-weight: 700;
+  line-height: 0.7;
+  text-align: start;
+  font-size: 18px;
+}
+
+.content {
+}
+
+.content-section {
+  background-color: var(--bg-color, rgba(0, 0, 40, 1));
+  padding: 0 20vi;
+}
+
+.header {
+  min-inline-size: 375px;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color, rgba(219, 0, 255, 1));
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 0.8;
+}
+
+.title__paragraph {
+  color: var(--text-color, rgba(0, 0, 40, 1));
+}
+
+.content__paragraph {
+  color: var(--paragraph-color, rgba(241, 178, 206, 1));
+}
+
+.title-decor {
+  background-color: var(--accent-color, #ff0070);
+}
+
+.section__right {
+}
+
+.content__text-block {
+  font-size: 18px;
+  /* рассчитать верный отступ сверху */
+  margin-inline-end: 1.5em;
+}
+
+.content__text-block a {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.section__center {
+}
+
+.footer {
+}
+
+@media (width <= 375px) {
+  body {
+    /* Стили body при ширине меньше 375px
+      grid??? основное различие это расстановка элементов на странице */
+  }
+}
+
+@media (width <= 768px) {
+  body {
+    /* Стили body при ширине меньше 768px */
+  }
+}
+
+@media (width <= 1024px) {
+  body {
+    /* Стили body при ширине меньше 1024px */
+  }
 }
