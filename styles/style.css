@@ -1,7 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .header {
   max-inline-size: 1024px;
-  width: 100%;
+  /* width: 100vw;
+  width: 100%; */
   height: 100vh;
   margin: 0 auto;
   padding: 0 20px;
@@ -75,10 +76,10 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  /* min-inline-size: 1024px;
-  min-block-size: 768px; */
-  /* max-width: 1024px;
-  width: 100%; */
+  max-inline-size: 1024px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
   background-image: url(/images/cover-image-dark.png);
   background-position: center 100%;
   background-repeat: no-repeat;
@@ -168,6 +169,11 @@
   text-align: start;
 }
 
+.content__title {
+  text-align: start;
+  line-height: 1.3;
+}
+
 .header__title {
   /* grid-row-start: 2;
   grid-row-end: 2; */
@@ -195,6 +201,27 @@
   grid-row-end: 3;  */
 }
 
+.section__why {
+  margin-block-end: 80px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "title card_1"
+    ". card_2";
+}
+
+.content__title__why {
+  grid-area: title;
+}
+
+.content__why_up {
+  grid-area: card_1;
+}
+
+.content__why_down {
+  grid-area: card_2;
+}
+
 .content__paragraph {
   font-family: var(--mine-font, "IBM Plex mono", sans-serif);
   font-size: var(--mine-font-size, 18px);
@@ -215,34 +242,26 @@
   border: 5px solid #ff0070;
 }
 
-.content__excerpt {
+.content__advice {
   color: var(--h2-color, rgba(0, 0, 40, 1));
   font-family: var(--mine-font, "IBM Plex mono", sans-serif);
   background-color: var(--accent-color, #ff0070);
 }
 
-/* .content__text-accent {
-  background-color: var(--accent-color, #ff0070);
-} */
-
-.section__right {
-  margin-block-end: 80px;
+.section__what {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  padding-block-end: 80px;
 }
 
-.content__title {
-  text-align: start;
-  line-height: 1.3;
-}
-
-.title_middle {
+.content__title__why {
   margin-block-end: 20px;
   width: 315px;
   line-height: 1.3;
 }
 
-.title__paragraph {
+.paragraph__title {
   font-family: var(--mine-font, "IBM Plex mono", sans-serif);
   font-size: var(--mine-font-size, 18px);
   color: var(--h2-color, rgba(53, 52, 48, 1));
@@ -265,19 +284,12 @@
   text-decoration: none;
 }
 
-.section__center {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px;
-  padding-block-end: 80px;
-}
-
-.section_right_text {
+.section_advice {
   /* display: grid;
   gap: 20px; */
 }
 
-.section__advice {
+.section__how {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
@@ -320,6 +332,7 @@
 }
 
 .gallary_img_ice {
+  /* display: block; */
   max-width: 100%;
   width: 315px;
   height: 595px;
@@ -370,8 +383,11 @@
 }
 
 .footer {
-  min-inline-size: 1024px;
+  max-inline-size: 1024px;
+  min-inline-size: 375px;
+  width: 100%;
   height: 100vh;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-self: center;
@@ -380,6 +396,7 @@
   position: relative;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
+  border: 5px solid #ff0070;
 }
 
 .footer::before {
@@ -419,25 +436,33 @@
 }
 
 @media (max-width: 1024px) {
-  /* .header {
-    min-inline-size: 1024px;
-    height: 100vh;
-  } */
-
   body {
     /* Стили body при ширине меньше 1024px */
-  }
-}
-
-@media (min-width <= 375px) {
-  body {
-    /* Стили body при ширине меньше 375px
-      grid??? основное различие это расстановка элементов на странице */
+    max-inline-size: 1024px;
+    min-inline-size: 768px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
   }
 }
 
 @media (width <= 768px) {
   body {
     /* Стили body при ширине меньше 768px */
+    max-inline-size: 768px;
+    min-inline-size: 375px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width <= 375px) {
+  body {
+    /* Стили body при ширине меньше 375px*/
+    max-inline-size: 375px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
   }
 }
