@@ -1,16 +1,22 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+.page {
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-image: url(/images/cover-image-dark.png);
+  background-position: center 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .header {
   max-inline-size: 1024px;
-  /* width: 100vw;
-  width: 100%; */
   height: 100vh;
+  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
-  grid-template-rows: min-content 1fr 1fr 1fr;
+  grid-template-rows: min-content 42% 32%;
   align-self: start;
-  overflow: hidden;
-  border: 5px solid #ff0070;
   position: relative;
   z-index: 0;
 }
@@ -72,19 +78,6 @@
   height: 9px;
   margin-block-start: 28px;
   margin-inline-start: 39px;
-}
-
-.page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  max-inline-size: 1024px;
-  width: 100%;
-  height: 100vh;
-  margin: 0 auto;
-  background-image: url(/images/cover-image-dark.png);
-  background-position: center 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .header__theme-menu {
@@ -169,16 +162,11 @@
   text-align: start;
 }
 
-.content__title {
-  text-align: start;
-  line-height: 1.3;
-}
-
 .header__title {
   /* grid-row-start: 2;
   grid-row-end: 2; */
   font-family: var(--mine-font, "IBM Plex mono", sans-serif);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   color: var(--title-color, rgba(219, 0, 255, 1));
   text-shadow: 4px 4px 0 var(--accent-color);
   line-height: 0.8;
@@ -187,6 +175,9 @@
 }
 
 .title-decor {
+  background-color: var(--accent-color, #ff0070);
+  margin-inline-start: 50%;
+  height: 71px;
 }
 
 .header_title_paragraph {
@@ -195,10 +186,19 @@
   color: var(--h2-color, rgba(53, 52, 48, 1));
   line-height: 1.3;
   font-weight: 700;
-  background-color: var(--accent-color, #ff0070);
-  margin-inline-start: 50%;
+  /* letter-spacing: -0.009em; */
+  padding-inline-end: 20px;
   /* grid-row-start: 3;
   grid-row-end: 3;  */
+}
+
+.content {
+  max-inline-size: 1024px;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-block-start: 60px;
 }
 
 .section__why {
@@ -208,6 +208,11 @@
   grid-template-areas:
     "title card_1"
     ". card_2";
+}
+
+.content__title {
+  text-align: start;
+  line-height: 1.3;
 }
 
 .content__title__why {
@@ -233,21 +238,6 @@
   margin-block-end: 20px;
 }
 
-.content {
-  max-inline-size: 1024px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-  margin-block-start: 60px;
-  border: 5px solid #ff0070;
-}
-
-.content__advice {
-  color: var(--h2-color, rgba(0, 0, 40, 1));
-  font-family: var(--mine-font, "IBM Plex mono", sans-serif);
-  background-color: var(--accent-color, #ff0070);
-}
-
 .section__what {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -259,6 +249,11 @@
   margin-block-end: 20px;
   width: 315px;
   line-height: 1.3;
+}
+
+.content__text-block {
+  /* рассчитать верный отступ сверху */
+  /* margin-inline-end: 1.5em; */
 }
 
 .paragraph__title {
@@ -274,19 +269,9 @@
   align-items: center;
 }
 
-.content__text-block {
-  /* рассчитать верный отступ сверху */
-  /* margin-inline-end: 1.5em; */
-}
-
 .content__text-block a {
   text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
-}
-
-.section_advice {
-  /* display: grid;
-  gap: 20px; */
 }
 
 .section__how {
@@ -294,6 +279,17 @@
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
   row-gap: 20px;
+}
+
+.section_advice {
+  /* display: grid;
+  gap: 20px; */
+}
+
+.content__advice {
+  color: var(--h2-color, rgba(0, 0, 40, 1));
+  font-family: var(--mine-font, "IBM Plex mono", sans-serif);
+  background-color: var(--accent-color, #ff0070);
 }
 
 .section_gallary {
@@ -304,12 +300,7 @@
 .gallary {
   block-size: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.75fr 1fr 2fr;
-  grid-template-rows: minmax(192px, 260px) minmax(230px, 315px) minmax(
-      318px,
-      428px
-    );
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-block-start: 20px;
 }
@@ -321,8 +312,7 @@
 }
 
 .gallary_img_sunset {
-  max-width: 100%;
-  width: 649px;
+  width: 100%;
   height: inherit;
   object-fit: cover;
   grid-column-start: 1;
@@ -332,10 +322,8 @@
 }
 
 .gallary_img_ice {
-  /* display: block; */
-  max-width: 100%;
-  width: 315px;
-  height: 595px;
+  width: 100%;
+  height: 100%;
   grid-row-start: 1;
   grid-row-end: 3;
   grid-column-start: 3;
@@ -347,11 +335,10 @@
 }
 
 .gallary_img_tape {
-  max-width: 100%;
-  width: 315px;
+  width: 100%;
+  height: 100%;
   object-fit: center center;
   object-position: center;
-  height: 768px;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
@@ -363,8 +350,7 @@
 }
 
 .gallary_img_books {
-  max-width: 100%;
-  width: 315px;
+  width: 100%;
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 2;
@@ -372,8 +358,8 @@
 }
 
 .gallary_img_street {
-  max-width: 100%;
-  width: 649px;
+  width: 100%;
+  height: 100%;
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 3;
@@ -384,19 +370,14 @@
 
 .footer {
   max-inline-size: 1024px;
-  min-inline-size: 375px;
-  width: 100%;
   height: 100vh;
+  width: 100%;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
+  display: grid;
   align-self: center;
   text-align: center;
-  align-items: center;
   position: relative;
-  display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  border: 5px solid #ff0070;
 }
 
 .footer::before {
@@ -429,7 +410,7 @@
 
 .footer__title {
   font-family: var(--mine-font, "IBM Plex mono", sans-serif);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   color: var(--title-color, rgba(219, 0, 255, 1));
   line-height: 0.8;
   grid-row: 2;
@@ -437,10 +418,7 @@
 
 @media (max-width: 1024px) {
   body {
-    /* Стили body при ширине меньше 1024px */
     max-inline-size: 1024px;
-    min-inline-size: 768px;
-    width: 100%;
     height: 100vh;
     margin: 0 auto;
   }
@@ -448,21 +426,35 @@
 
 @media (width <= 768px) {
   body {
-    /* Стили body при ширине меньше 768px */
     max-inline-size: 768px;
     min-inline-size: 375px;
     width: 100%;
     height: 100vh;
     margin: 0 auto;
   }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-block-start: 192px;
+  }
+
+  .content__title__why {
+    max-width: 236px;
+  }
+
+  .section__what {
+    grid-template-columns: none;
+    grid-template-rows: auto;
+  }
 }
 
+/* 
 @media (min-width <= 375px) {
   body {
-    /* Стили body при ширине меньше 375px*/
     max-inline-size: 375px;
     width: 100%;
     height: 100vh;
     margin: 0 auto;
   }
-}
+}  */
