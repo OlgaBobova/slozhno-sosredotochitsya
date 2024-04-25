@@ -4,16 +4,12 @@
   переключая тему
 */
 :root.theme_dark {
-  --mine-font: "IBM Plex mono";
-  --mine-font-size: 18px;
   --title-color: rgba(219, 0, 255, 1);
   --h2-color: rgba(0, 0, 40, 1);
   --text-color: rgba(241, 178, 206, 1);
   --accent-color: #ff0070;
   --next-color: #ff0070;
-  --bg-img: url(/images/cover-image-dark.png);
-  --padding-big: 20px;
-  --padding-small: 10px;
+  --bg-img: url(images/cover-image-dark.png);
 }
 
 .page.theme_dark {
