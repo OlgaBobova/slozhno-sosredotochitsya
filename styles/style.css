@@ -4,11 +4,11 @@
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  background-image: var(--bg-img, url(images/cover-image-dark.png));
+  /* background-image: var(--bg-img, url(images/cover-image-dark.png));
   background-position: center 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
   font-family: var(--accent-font, "IBM Plex mono", sans-serif);
 }
 
