@@ -3,7 +3,6 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
 /* :root.theme_light {
   --title-color: rgba(255, 194, 230, 1);
   --h2-color: rgba(53, 52, 48, 1);
@@ -11,18 +10,19 @@
   --accent-color: rgba(255, 141, 203, 1);
   --next-color: rgba(53, 52, 48, 1);
   --bg-img: url(../images/cover-image-light.png);
-} */
+  --frame-color: rgba(255, 0, 112, 1);
+}   */
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде. Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+    чем стили в медиазапросе предпочтений пользователя*/
   --title-color: rgba(255, 194, 230, 1);
   --h2-color: rgba(53, 52, 48, 1);
   --text-color: rgba(53, 52, 48, 1);
   --accent-color: rgba(255, 141, 203, 1);
   --next-color: rgba(53, 52, 48, 1);
   --bg-img: url(../images/cover-image-light.png);
+  --frame-color: rgba(255, 0, 112, 1);
 }
 
 .theme_light .rec {
@@ -37,6 +37,7 @@
     --accent-color: rgba(255, 141, 203, 1);
     --next-color: rgba(53, 52, 48, 1);
     --bg-img: url(../images/cover-image-light.png);
+    --frame-color: rgba(255, 0, 112, 1);
   }
 
   .theme_light .rec {
