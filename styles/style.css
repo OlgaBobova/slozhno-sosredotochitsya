@@ -275,7 +275,7 @@
 .footer__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--title-color, rgba(219, 0, 255, 1));
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
   font-family: var(--accent-font, "IBM Plex mono", sans-serif);
   line-height: 0.83;
   font-weight: 700;
@@ -498,6 +498,6 @@
   }
 
   .footer__title {
-    text-shadow: 4px 4px 0 var(--frame-color, rgba(255, 0, 112, 1));
+    text-shadow: 2px 2px 0 var(--frame-color, rgba(255, 0, 112, 1));
   }
 }
