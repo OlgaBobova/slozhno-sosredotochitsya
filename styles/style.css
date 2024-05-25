@@ -327,11 +327,6 @@
   }
 
   .header__theme-menu-list {
-    /* display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-    text-transform: lowercase; */
     margin-block-start: 14px;
   }
 
@@ -366,7 +361,6 @@
   }
 
   .gallary_img {
-    /* display: block; */
     width: 728px;
     height: 100%;
     width: 100%;
