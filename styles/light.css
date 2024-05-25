@@ -13,6 +13,7 @@
   --text-color: rgba(53, 52, 48, 1);
   --accent-color: rgba(255, 141, 203, 1);
   --next-color: rgba(53, 52, 48, 1);
+  --hover-color: rgba(50, 49, 45, 0.4);
   --bg-img: url(../images/cover-image-light.png);
   --frame-color: rgba(255, 0, 112, 1);
 }
@@ -29,6 +30,7 @@
     --text-color: rgba(53, 52, 48, 1);
     --accent-color: rgba(255, 141, 203, 1);
     --next-color: rgba(53, 52, 48, 1);
+    --hover-color: rgba(50, 49, 45, 0.4);
     --bg-img: url(../images/cover-image-light.png);
     --frame-color: rgba(255, 0, 112, 1);
   }
